@@ -5,7 +5,7 @@
   "inputs": {
     "content_brief_form": "Google Forms or Airtable",
     "brand_voice_guidelines": "Stored in workflow variables",
-    "openai_api_key": "${OPENAI_API_KEY}",
+    "gemini_api_key": "${GEMINI_API_KEY}",
     "target_platforms": ["WordPress", "LinkedIn", "Twitter", "Instagram"]
   },
   "steps": [
@@ -22,9 +22,9 @@
     {
       "id": 2,
       "action": "research_topic",
-      "tool": "OpenAI GPT-4",
+      "tool": "Google Gemini",
       "config": {
-        "model": "gpt-4-turbo",
+        "model": "gemini-1.5-flash",
         "prompt": "Research this topic and provide 5 key statistics, 3 expert quotes, and 5 subtopics to cover:\\n\\nTopic: {{content_brief.topic}}\\nKeywords: {{content_brief.target_keywords}}\\n\\nProvide structured research that can be used to write a comprehensive article.",
         "output": "research_data"
       }
@@ -32,9 +32,9 @@
     {
       "id": 3,
       "action": "generate_blog_post",
-      "tool": "OpenAI GPT-4",
+      "tool": "Google Gemini",
       "config": {
-        "model": "gpt-4-turbo",
+        "model": "gemini-1.5-flash",
         "prompt": "Write a 1200-word SEO-optimized blog post with the following specifications:\\n\\nTopic: {{content_brief.topic}}\\nTarget Keywords: {{content_brief.target_keywords}}\\nTone: {{content_brief.tone}}\\nResearch: {{research_data}}\\n\\nBrand Voice Guidelines:\\n- Professional yet approachable\\n- Data-driven with storytelling\\n- Action-oriented conclusions\\n- UK English spelling\\n\\nStructure:\\n- Compelling H1 title (include target keyword)\\n- Introduction with hook (150 words)\\n- 4-5 H2 sections with supporting H3s\\n- Include statistics from research\\n- Actionable conclusion\\n- Meta description (155 characters)\\n\\nSEO Requirements:\\n- Target keyword in first 100 words\\n- 2-3% keyword density\\n- Internal linking opportunities (note [LINK] where relevant)\\n- Include related keywords naturally",
         "output": "blog_post_content"
       }
@@ -42,9 +42,9 @@
     {
       "id": 4,
       "action": "generate_social_media_posts",
-      "tool": "OpenAI GPT-4",
+      "tool": "Google Gemini",
       "config": {
-        "model": "gpt-4-turbo",
+        "model": "gemini-1.5-flash",
         "prompt": "Repurpose this blog post into social media content:\\n\\n{{blog_post_content}}\\n\\nGenerate:\\n1. 5 LinkedIn posts (varying angles: statistic highlight, question, case study, tip, CTA)\\n2. 10 Twitter/X posts (each under 280 chars, thread-worthy)\\n3. 3 Instagram captions (engaging, emoji-friendly, hashtag suggestions)\\n4. 1 Email newsletter snippet (150 words with CTA)\\n\\nFormat as JSON with platform, content, and character count.",
         "output": "social_posts_json"
       }

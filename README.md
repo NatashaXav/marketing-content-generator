@@ -2,7 +2,7 @@
 
 **Business Goal**: Automate content creation for blogs, social media, and SEO to maintain consistent brand voice at scale
 
-**Tools**: OpenAI GPT-4, Make.com/Zapier, Google Docs API, Social Media APIs
+**Tools**: Gemini Gemini 1.5, Make.com/Zapier, Google Docs API, Social Media APIs
 
 **Business Impact**: Generates 20+ pieces of content weekly, saves 15 hours/week, maintains brand consistency across channels
 
@@ -27,12 +27,12 @@ Marketing teams struggle with content production demands:
 
 An AI-powered content generation workflow that:
 1. Takes topic keywords or article briefs as input
-2. Generates SEO-optimized blog posts using GPT-4
+2. Generates SEO-optimized blog posts using Gemini 1.5
 3. Repurposes content into social media posts automatically
 4. Maintains brand voice through custom prompts
 5. Schedules content across platforms via API integrations
 
-**Implementation**: No-code workflow on Make.com or Zapier with GPT-4 integration
+**Implementation**: No-code workflow on Make.com or Zapier with Gemini 1.5 integration
 
 ---
 
@@ -40,7 +40,7 @@ An AI-powered content generation workflow that:
 
 **Time Savings**: 15 hours/week → 3 hours/week (80% reduction)
 **Output Volume**: 5 posts/week → 20+ posts/week (4x increase)
-**Cost**: £60/month (GPT-4 API) vs £2,500/month (freelance writers)
+**Cost**: £60/month (Gemini 1.5 API) vs £2,500/month (freelance writers)
 **Consistency**: 95% brand voice adherence (AI trained on brand guidelines)
 
 ---
@@ -50,7 +50,7 @@ An AI-powered content generation workflow that:
 ### Workflow Steps
 
 1. **Input Collection** → Content brief via Google Form/Airtable
-2. **Research** → GPT-4 researches topic, finds key statistics
+2. **Research** → Gemini 1.5 researches topic, finds key statistics
 3. **Blog Generation** → AI writes 1000-1500 word SEO-optimized article
    - H1/H2/H3 structure
    - Target keywords naturally incorporated
@@ -138,7 +138,7 @@ See `scripts/content_generator.py` for Python implementation.
 - **Annual cost**: 17 hours/week × £25/hour × 52 weeks = £22,100
 
 **Automated Content Creation**:
-- GPT-4 API: £60/month = £720/year
+- Gemini 1.5 API: £60/month = £720/year
 - Editor review time: 3 hours/week × £25/hour × 52 weeks = £3,900
 - Setup time: 3 hours one-time
 - **Annual cost**: £4,620
@@ -171,4 +171,4 @@ See `outputs/` folder for examples:
 **Date**: January 2025
 **Status**: Production-Ready
 
-**Note**: Requires OpenAI API key. Human review recommended for brand-critical content.
+**Note**: Requires Google Gemini AI key. Human review recommended for brand-critical content.
